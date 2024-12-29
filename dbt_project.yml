@@ -38,5 +38,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   GlobalMart_Project:
     Source:
-      +materialized: view 
+      +materialized: view
+       
         
