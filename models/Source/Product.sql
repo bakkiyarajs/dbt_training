@@ -1,1 +1,1 @@
-select * from RAW.GLOBALMART.Product
+select * from {{ source('globalsource', 'product') }}
