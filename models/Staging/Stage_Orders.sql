@@ -1,4 +1,6 @@
-select  O.*,
+select 
+        {{ dbt_utils.generate_surrogate_key(['O.ORDER_ID', 'P.PRODUCTID', 'C.CUSTOMERID']) }},
+        O.*,
         C.*,
         P.*,
         (ORDER_SELLING_PRICE - ORDER_COST_PRICE) as Order_Profit
